@@ -16,7 +16,7 @@ app/content/mu-plugins/*
 !app/content/mu-plugins/.gitkeep
 !app/content/mu-plugins/fallback-themes.php
 !app/content/mu-plugins/bedrock-autoloader.php
-# remember to exlude custom plugins from being ignored 
+# remember to exlude custom plugins from being ignored
 # example: !app/plugins/plugintobepreserved
 
 # SQLITE DB
@@ -57,3 +57,9 @@ Icon
 Network Trash Folder
 Temporary Items
 .apdisk
+
+# Node
+node_modules
+
+#Sass
+.sass-cache
