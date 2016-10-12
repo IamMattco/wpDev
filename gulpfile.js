@@ -26,7 +26,7 @@ gulp.task('styles', function() {
     .pipe(gulp.dest(themePath +'/assets/dist/styles'))
     .pipe(rename({ suffix: '.min' }))
     .pipe(minifycss())
-    .pipe(gulp.dest(themePath + 'assets/dist/styles'))
+    .pipe(gulp.dest(themePath + '/assets/dist/styles'))
     .pipe(notify({ message: 'Style zostały zminifikowane i połączone.' }));
 });
 
@@ -37,15 +37,15 @@ gulp.task('scripts', function() {
     .pipe(gulp.dest(themePath +'/assets/dist/js'))
     .pipe(rename({ suffix: '.min' }))
     .pipe(uglify())
-    .pipe(gulp.dest(themePath + 'assets/dist/js'))
+    .pipe(gulp.dest(themePath + '/assets/dist/js'))
     .pipe(notify({ message: 'Pliki JavaScript zostały zminifikowane i połączone.' }));
 });
 
 // Images
 gulp.task('images', function() {
-  return gulp.src(themePath + 'assets/src/images/*')
+  return gulp.src(themePath + '/assets/src/images/*')
     .pipe(cache(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true })))
-    .pipe(gulp.dest(themePath + 'assets/dist/images'))
+    .pipe(gulp.dest(themePath + '/assets/dist/images'))
     .pipe(notify({ message: 'Obrazy zostały zoptymalizowane.' }));
 });
 
@@ -61,7 +61,7 @@ gulp.task('default', function() {
 
 // Watch
 gulp.task('watch', function() {
-  gulp.watch(themePath + 'assets/src/styles/*.scss', ['styles']);
-  gulp.watch(themePath + 'assets/src/js/*.js', ['scripts']);
-  gulp.watch(themePath + 'assets/src/images/*', ['images']);
+  gulp.watch(themePath + '/assets/src/styles/*.scss', ['styles']);
+  gulp.watch(themePath + '/assets/src/js/*.js', ['scripts']);
+  gulp.watch(themePath + '/assets/src/images/*', ['images']);
 });
