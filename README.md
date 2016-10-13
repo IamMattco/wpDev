@@ -8,6 +8,12 @@ Clone this repo and type
 composer install
 ```
 
+Next install node packages
+
+```bash
+npm install
+```
+
 in order to install all the dependencies of the project. **You are already done**, just launch the php's built-in server with
 
 ```bash
